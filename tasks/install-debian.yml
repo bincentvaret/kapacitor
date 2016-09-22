@@ -1,4 +1,7 @@
 ---
+- name: Ensure apt-transport-https is installed.
+  apt: name=apt-transport-https state=present
+
 - name: Install any necessary dependencies [Debian/Ubuntu]
   apt:
     name: "{{ item }}"
